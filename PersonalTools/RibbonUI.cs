@@ -264,7 +264,7 @@ namespace peteli.PersonalTools
 
             switch (control.Id)
             {
-                case "btnFormatHeaderFooterDialog":
+                case "btnFormatHeaderFooter000":
                     CTPManager.ShowCTP();
                     break;
                 default:

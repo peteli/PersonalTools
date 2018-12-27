@@ -15,8 +15,8 @@ namespace peteli.PersonalTools
             if (ctp == null)
             {
                 // Make a new one using ExcelDna.Integration.CustomUI.CustomTaskPaneFactory 
-                ctp = CustomTaskPaneFactory.CreateCustomTaskPane(typeof(UserControlCTP), "Corporate Header");
-                ctp.DockPosition = MsoCTPDockPosition.msoCTPDockPositionTop;
+                ctp = CustomTaskPaneFactory.CreateCustomTaskPane(typeof(UserControlHost), "Corporate Header");
+                ctp.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft;
                 ctp.DockPositionStateChange += CTP_DockPositionStateChange;
                 ctp.VisibleStateChange += CTP_VisibleStateChange;
                 ctp.Visible = true;
@@ -49,3 +49,5 @@ namespace peteli.PersonalTools
         }
     }
 }
+
+//Dialog Properties / Summary Info / (xlDialogProperties, xlDialogSummaryInfo)

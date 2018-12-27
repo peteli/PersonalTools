@@ -2,8 +2,38 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="peteli.PersonalTools.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ImagePath" Type="System.String" Scope="User">
+    <Setting Name="LogoImagePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\DR-FSPADD\HOME\LIP1DR3\07_logo\bosch_wortmarke_ohne_slogan.jpg</Value>
+    </Setting>
+    <Setting Name="ConfidentialityCollection" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="defaultTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Standard Titel</Value>
+    </Setting>
+    <Setting Name="defaultSubject" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Standard Thema</Value>
+    </Setting>
+    <Setting Name="defaultAuthor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Standard Autor</Value>
+    </Setting>
+    <Setting Name="defaultManager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Standard Manager</Value>
+    </Setting>
+    <Setting Name="defaultCompany" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Standard Firma</Value>
+    </Setting>
+    <Setting Name="defaultConfidentiality" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Standard Vertraulichkeit</Value>
+    </Setting>
+    <Setting Name="charAttention" Type="System.Char" Scope="User">
+      <Value Profile="(Default)">⚡</Value>
+    </Setting>
+    <Setting Name="FontNameConfidentiality" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Segoe UI</Value>
+    </Setting>
+    <Setting Name="FontName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Segoe UI</Value>
     </Setting>
   </Settings>
 </SettingsFile>

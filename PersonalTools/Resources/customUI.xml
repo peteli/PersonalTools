@@ -7,12 +7,7 @@
     <tabs>
       <tab idMso="TabPageLayoutExcel">
         <group id="GroupPageSetupExtended" label="Seite einrichten">
-          <splitButton id="sptButtonFormatHeaderFooter" size="large">
-            <button id="btnFormatHeaderFooter000" label="Corporate Header Footer" imageMso="HeaderFooterInsert" tag="RibbonName:=;inMenu:=;CustomPicture:=;CustomPicturePath:=" onAction="OnAction" getEnabled="GetEnabled" screentip="Make it Corporate Identity" supertip="Format sheet in a nice VAAT layout" />
-            <menu id="menueFormatHeaderFooter" itemSize="large">
-              <button id="btnFormatHeaderFooterDialog" label="Change Values..." imageMso="ViewsFormView" tag="RibbonName:=;inMenu:=;CustomPicture:=;CustomPicturePath:=" onAction="OnAction" getEnabled="GetEnabled" />
-            </menu>
-          </splitButton>
+          <button id="btnFormatHeaderFooter000" label="Corporate Header Footer" imageMso="HeaderFooterInsert" size="large" tag="RibbonName:=;inMenu:=;CustomPicture:=;CustomPicturePath:=" onAction="OnAction" getEnabled="GetEnabled" screentip="Make it Corporate Identity" supertip="opens task pane to format worksheet" />
         </group>
       </tab>
     </tabs>

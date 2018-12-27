@@ -25,13 +25,132 @@ namespace peteli.PersonalTools.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ImagePath {
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\DR-FSPADD\\HOME\\LIP1DR3\\07_logo\\bosch_wortmarke_ohne_slogan.jpg")]
+        public string LogoImagePath {
             get {
-                return ((string)(this["ImagePath"]));
+                return ((string)(this["LogoImagePath"]));
             }
             set {
-                this["ImagePath"] = value;
+                this["LogoImagePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection ConfidentialityCollection {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ConfidentialityCollection"]));
+            }
+            set {
+                this["ConfidentialityCollection"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard Titel")]
+        public string defaultTitle {
+            get {
+                return ((string)(this["defaultTitle"]));
+            }
+            set {
+                this["defaultTitle"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard Thema")]
+        public string defaultSubject {
+            get {
+                return ((string)(this["defaultSubject"]));
+            }
+            set {
+                this["defaultSubject"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard Autor")]
+        public string defaultAuthor {
+            get {
+                return ((string)(this["defaultAuthor"]));
+            }
+            set {
+                this["defaultAuthor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard Manager")]
+        public string defaultManager {
+            get {
+                return ((string)(this["defaultManager"]));
+            }
+            set {
+                this["defaultManager"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard Firma")]
+        public string defaultCompany {
+            get {
+                return ((string)(this["defaultCompany"]));
+            }
+            set {
+                this["defaultCompany"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Standard Vertraulichkeit")]
+        public string defaultConfidentiality {
+            get {
+                return ((string)(this["defaultConfidentiality"]));
+            }
+            set {
+                this["defaultConfidentiality"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("⚡")]
+        public char charAttention {
+            get {
+                return ((char)(this["charAttention"]));
+            }
+            set {
+                this["charAttention"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Segoe UI")]
+        public string FontNameConfidentiality {
+            get {
+                return ((string)(this["FontNameConfidentiality"]));
+            }
+            set {
+                this["FontNameConfidentiality"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Segoe UI")]
+        public string FontName {
+            get {
+                return ((string)(this["FontName"]));
+            }
+            set {
+                this["FontName"] = value;
             }
         }
     }
