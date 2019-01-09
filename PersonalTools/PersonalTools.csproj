@@ -105,7 +105,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="notes.md" />
-    <None Include="PersonalTools-AddIn.dna" />
+    <None Include="PersonalTools-AddIn.dna">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\WorkbookProperties.datasource" />
     <None Include="Properties\ExcelDna.Build.props" />

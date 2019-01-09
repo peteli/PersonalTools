@@ -16,5 +16,6 @@
        Excel-DNA also allows the xml for ribbon UI extensions to be specified in the .dna file.
        See the main Excel-DNA site at http://excel-dna.net for downloads of the full distribution.
   -->
-
+  <Reference Path="QRCoder.dll" Pack="true" />
+  <Reference Path="System.Drawing.Common.dll" Pack="true" />
 </DnaLibrary>
