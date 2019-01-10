@@ -10,6 +10,12 @@
           <button id="btnFormatHeaderFooter000" label="Corporate Header Footer" imageMso="HeaderFooterInsert" size="large" tag="RibbonName:=;inMenu:=;CustomPicture:=;CustomPicturePath:=" onAction="OnAction" getEnabled="GetEnabled" screentip="Make it Corporate Identity" supertip="opens task pane to format worksheet" />
         </group>
       </tab>
+      <tab idMso="TabData">
+        <group id="peteli.PersonalTools" label="Personal Tools">
+          <button id="btnQRCode" label="Create QR Code" imageMso="BarcodeInsert" size="large" tag="RibbonName:=;inMenu:=;CustomPicture:=;CustomPicturePath:=" onAction="OnAction" getEnabled="GetEnabled" screentip="QR Code" supertip="Create QR Code" />
+          <button id="btnGUID" label="Create GUID" imageMso="FieldCodes" size="large" tag="RibbonName:=;inMenu:=;CustomPicture:=;CustomPicturePath:=" onAction="OnAction" getEnabled="GetEnabled" screentip="GUID" supertip="Create GUID" />
+        </group>
+      </tab>
     </tabs>
   </ribbon>
 </customUI>

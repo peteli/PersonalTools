@@ -5,45 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:peteli.PersonalTools"
              mc:Ignorable="d" 
-             d:DesignHeight="562.106" d:DesignWidth="200">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Image Name="imgLogo"  Margin="10" Grid.Row="0"/>
-        <Label Content="Title" Grid.Row="1" VerticalAlignment="Bottom"/>
-        <Label Content="Subject" Grid.Row="3" VerticalAlignment="Bottom" />
-        <Label Content="Author" Grid.Row="5" VerticalAlignment="Bottom" />
-        <Label Content="Manager" Grid.Row="7" VerticalAlignment="Bottom" />
-        <Label Content="Company" Grid.Row="9" VerticalAlignment="Bottom" />
-        <Label Content="Confidentiality" Grid.Row="11" VerticalAlignment="Bottom" />
-        <TextBox Name="bxTitle" Grid.Column="1" Margin="5" Grid.Row="2" TextWrapping="Wrap"></TextBox>
-        <TextBox Name="bxSubject" Grid.Column="1" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="TextBox"/>
-        <TextBox Name="bxAuthor" Grid.Column="1" Margin="5" Grid.Row="6" TextWrapping="Wrap" Text="TextBox"/>
-        <TextBox Name="bxManager" Grid.Column="1" Margin="5" Grid.Row="8" TextWrapping="Wrap" Text="TextBox"/>
-        <TextBox Name="bxCompany" Grid.Column="1" Margin="5" Grid.Row="10" TextWrapping="Wrap" Text="TextBox"/>
-        <TextBox Name="bxConfidentiality" Grid.Column="1" Margin="5" Grid.Row="12" TextWrapping="Wrap" Text="TextBox"/>
-        <Button Name="cmdbtnFormat" Content="Format Header/Footer" Margin="5" Grid.Row="13" IsDefault="True"/>
-        <WrapPanel Grid.Row="14">
-            <Button Name="btnLoadDefaults" Content="Load Defaults" Margin="5" Width="90" Height="25"/>
-            <Button Name="btnSaveDefaults" Content="Save Defaults" Margin="5" Width="90" Height="25"/>
-        </WrapPanel>
-    </Grid>
+             d:DesignHeight="545.106" d:DesignWidth="294">
+    <StackPanel>
+        <Image Name="imgLogo"  Margin="10" MinHeight="75" MaxHeight="100"/>
+        <TextBlock Text="Title" Margin="5 15 5 1" Padding="0"/>
+        <TextBox Name="bxTitle" Margin="5 0" Padding="6"  />
+        <TextBlock Text="Subject" Margin="5 15 5 1" Padding="0"/>
+        <TextBox Name="bxSubject" Margin="5 0" Padding="6" />
+        <TextBlock Text="Author" Margin="5 15 5 1" Padding="0"/>
+        <TextBox Name="bxAuthor" Margin="5 0" Padding="6"  />
+        <TextBlock Text="Manager" Margin="5 15 5 1" Padding="0"/>
+        <TextBox Name="bxManager" Margin="5 0" Padding="6"  />
+        <TextBlock Text="Company" Margin="5 15 5 1" Padding="0"/>
+        <TextBox Name="bxCompany" Margin="5 0" Padding="6"  />
+        <TextBlock Text="Confidentiality" Margin="5 15 5 1" Padding="0"/>
+        <TextBox Name="bxConfidentiality" Margin="5 0" Padding="6"  />
+        <Separator Margin="0 5"/>
+        <Button Name="cmdbtnFormat" Content="Format Header/Footer" Padding="5" Margin="2" IsDefault="True"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="btnLoadDefaults" Grid.Column="0" Content="Load Defaults" Padding="5" Margin="2" />
+            <Button Name="btnSaveDefaults" Grid.Column="1" Content="Save Defaults" Padding="5" Margin="2" />
+        </Grid>
+    </StackPanel>
+
 </UserControl>

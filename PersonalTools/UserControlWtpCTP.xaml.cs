@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -77,8 +79,13 @@ namespace peteli.PersonalTools
             }
             else
             {
-                ImageSourceConverter c = new ImageSourceConverter();
-                this.imgLogo.Source = (ImageSource)c.ConvertFrom(Properties.Resources.logo_default);
+                //ImageSourceConverter c = new ImageSourceConverter();
+                Bitmap defImange = Properties.Resources.logo_default;
+                string imageFileName = System.IO.Path.Combine(System.IO.Path.GetTempPath(), System.IO.Path.GetRandomFileName());
+                defImange.Save(imageFileName);
+                docProps.LogoImageFileName = imageFileName;
+                // convert from Bitmap Type to ImageSource
+                this.imgLogo.Source = Imaging.CreateBitmapSourceFromHBitmap(defImange.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
                 this.imagePicker.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             }
             this.imgLogo.Stretch = Stretch.Uniform;

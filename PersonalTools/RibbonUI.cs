@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using ExcelDna.Integration.CustomUI;
 using System.Diagnostics;
 using System.Drawing;
+using peteli.PersonalTools.guid;
 
 namespace peteli.PersonalTools
 {
@@ -267,8 +268,13 @@ namespace peteli.PersonalTools
                 case "btnFormatHeaderFooter000":
                     CTPManager.ShowCTP();
                     break;
+                case "btnGUID":
+                    // do something
+                    Debug.WriteLine("case catch {0}", control.Id);
+                    XlGUID.Create();
+                    break;
                 default:
-                    Debug.WriteLine("No action is assigned to {0}",control.Id);
+                    Debug.WriteLine("No action is assigned to {0}", control.Id.ToString());
                     break;
             }
 
