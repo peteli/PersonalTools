@@ -5,7 +5,9 @@ using ExcelDna.Integration.CustomUI;
 
 namespace peteli.PersonalTools
 {
-    /////////////// Helper class to manage CTP ///////////////////////////
+    /// <summary>
+    /// helper class to manage CTP - Custom Task Pane 
+    /// </summary>
     internal static class CTPManager
     {
         static CustomTaskPane ctp;
