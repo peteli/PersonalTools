@@ -10,6 +10,9 @@ using ExcelApp = Microsoft.Office.Interop.Excel.Application;
 
 namespace peteli.PersonalTools.guid
 {
+    /// <summary>
+    /// puts a GUID in active cell
+    /// </summary>
     public static class XlGUID
     {
         #region functions
