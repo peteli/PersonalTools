@@ -3,3 +3,10 @@ This is an Excel Addin that works by just starting *PersonalTools-AddIn-packed.x
 Download mentioned files and use it. 
 
 ![](https://github.com/peteli/PersonalTools/blob/master/wiki/PersonalTools.PNG)
+
+# Acknowledgements
+
+This work is based on 
+https://github.com/Excel-DNA by ![Govert van Drimmelen](https://github.com/govert)
+
+
