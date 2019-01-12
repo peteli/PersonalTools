@@ -33,7 +33,7 @@
       <Value Profile="(Default)">Segoe UI</Value>
     </Setting>
     <Setting Name="FontName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Segoe UI</Value>
+      <Value Profile="(Default)">Segoe</Value>
     </Setting>
   </Settings>
 </SettingsFile>

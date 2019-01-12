@@ -144,7 +144,7 @@ namespace peteli.PersonalTools.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Segoe UI")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Segoe")]
         public string FontName {
             get {
                 return ((string)(this["FontName"]));

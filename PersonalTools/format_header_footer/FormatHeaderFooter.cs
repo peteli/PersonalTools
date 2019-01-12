@@ -55,12 +55,14 @@ namespace peteli.PersonalTools
             #endregion
             #region LeftFooterGrafic
             // didn't find a way other then saving QRcode image first and secondly take filname and assign it to graphic object
-            string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
-            docProps.GetQRCodeImage(docProps.GetXMLString).Save(imageFileName);
+            // string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName());
+            //docProps.GetQRCodeImage(docProps.GetXMLString).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png);
+            docProps.ConvertTextintoImage(docProps.LeftFooterNoFontName.ToString()).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png);
             Graphic imgLeftFooter = Xlws.PageSetup.LeftFooterPicture;
             imgLeftFooter.Filename = imageFileName;
             imgLeftFooter.LockAspectRatio = Microsoft.Office.Core.MsoTriState.msoTrue;
-            imgLeftFooter.Height = 60;
+            //imgLeftFooter.Height = 60;
 
             #endregion
             #region apply changes
@@ -181,13 +183,15 @@ namespace peteli.PersonalTools
         public StringBuilder RightHeader => RightHeaderGrafic;
         public StringBuilder RightHeaderGrafic => new StringBuilder("&G");
         public StringBuilder LeftFooterGrafic => new StringBuilder("&G");
-        public StringBuilder LeftFooter => new StringBuilder()
-            .Append(FontName)
+        public StringBuilder LeftFooterNoFontName => new StringBuilder()
             .Append("Author: " + AuthorString)
             .Append("\n")
             .Append("Manager: " + ManagerString)
             .Append("\n")
             .Append(CompanyString);
+        public StringBuilder LeftFooter => new StringBuilder()
+            .Append(FontName)
+            .Append(LeftFooterNoFontName);
         public StringBuilder LeftFooterQRCodeString => new StringBuilder()
             .Append("Author: " + AuthorString)
             .Append("Manager: " + ManagerString)
@@ -222,6 +226,26 @@ namespace peteli.PersonalTools
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
             return qrCodeImage;
+        }
+        public Bitmap ConvertTextintoImage(string drawString)
+        {
+            // create font and brush
+            System.Drawing.Font drawFont = new System.Drawing.Font(Properties.Settings.Default.FontName, 6 , FontStyle.Regular);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
+            // create Image
+            Bitmap tempBitmap = new Bitmap(10,10);
+            tempBitmap.SetResolution(600, 600);
+            System.Drawing.Graphics drawImage = System.Drawing.Graphics.FromImage(tempBitmap);
+            SizeF textSize = drawImage.MeasureString(drawString, drawFont);
+
+            Bitmap drawBitmap = new Bitmap((int)textSize.Width + 1, (int)textSize.Height + 1);
+            drawBitmap.SetResolution(600, 600);
+            drawImage = System.Drawing.Graphics.FromImage(drawBitmap);
+            drawImage.DrawString(drawString, drawFont, drawBrush, new PointF(0, 0));
+            drawImage.Save();
+
+
+            return drawBitmap;
         }
         #endregion
         #region XMLdocument
