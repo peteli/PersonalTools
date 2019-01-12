@@ -58,7 +58,7 @@ namespace peteli.PersonalTools
             // string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName());
             //docProps.GetQRCodeImage(docProps.GetXMLString).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png); 
-            docProps.ConvertTextintoImage(docProps.LeftFooterNoFontName.ToString()).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png);
+            docProps.ConvertTextintoImage(docProps.LeftFooterNoFontName.ToString()).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png); 
             Graphic imgLeftFooter = Xlws.PageSetup.LeftFooterPicture;
             imgLeftFooter.Filename = imageFileName;
             imgLeftFooter.LockAspectRatio = Microsoft.Office.Core.MsoTriState.msoTrue;

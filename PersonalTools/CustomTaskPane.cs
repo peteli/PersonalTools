@@ -5,6 +5,7 @@ using ExcelDna.Integration.CustomUI;
 
 namespace peteli.PersonalTools
 {
+    // TODO CTPManager to organize more than one ctp
     /// <summary>
     /// helper class to manage CTP - Custom Task Pane 
     /// </summary>
