@@ -57,7 +57,7 @@ namespace peteli.PersonalTools
             // didn't find a way other then saving QRcode image first and secondly take filname and assign it to graphic object
             // string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             string imageFileName = Path.Combine(Path.GetTempPath(), Path.GetTempFileName());
-            //docProps.GetQRCodeImage(docProps.GetXMLString).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png);
+            //docProps.GetQRCodeImage(docProps.GetXMLString).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png); 
             docProps.ConvertTextintoImage(docProps.LeftFooterNoFontName.ToString()).Save(imageFileName,System.Drawing.Imaging.ImageFormat.Png);
             Graphic imgLeftFooter = Xlws.PageSetup.LeftFooterPicture;
             imgLeftFooter.Filename = imageFileName;
