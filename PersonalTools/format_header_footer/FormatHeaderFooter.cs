@@ -15,7 +15,6 @@ namespace peteli.PersonalTools
 {
     /// <summary>
     /// class holding model to modify header/footer of excel workbook
-    /// 
     /// </summary>
     static class FormatHeaderFooter
     {
