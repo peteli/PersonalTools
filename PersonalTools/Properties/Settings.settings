@@ -21,10 +21,10 @@
       <Value Profile="(Default)">Standard Manager</Value>
     </Setting>
     <Setting Name="defaultCompany" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Standard Firma</Value>
+      <Value Profile="(Default)">Standard ACME</Value>
     </Setting>
     <Setting Name="defaultConfidentiality" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Standard Vertraulichkeit</Value>
+      <Value Profile="(Default)">Standard Public Domain</Value>
     </Setting>
     <Setting Name="charAttention" Type="System.Char" Scope="User">
       <Value Profile="(Default)">⚡</Value>
