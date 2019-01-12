@@ -14,7 +14,7 @@ using System.ComponentModel;
 namespace peteli.PersonalTools
 {
     /// <summary>
-    /// class holding model to modify header/footer of excel workbook
+    /// class holding model to modify header/footer of excel_workbook
     /// </summary>
     static class FormatHeaderFooter
     {
