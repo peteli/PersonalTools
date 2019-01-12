@@ -22,8 +22,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 # xll add-in shall not be ignored
-![Dd]ebug/PersonalTools-AddIn64-packed.xll
-![Dd]ebug/PersonalTools-AddIn-packed.xll
+!PersonalTools-AddIn64-packed.xll
+!PersonalTools-AddIn-packed.xll
 
 # Visual Studio 2015 cache/options directory
 .vs/
