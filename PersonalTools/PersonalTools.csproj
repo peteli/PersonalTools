@@ -73,6 +73,13 @@
     <Compile Include="AddIn.cs" />
     <Compile Include="CustomTaskPane.cs" />
     <Compile Include="format_header_footer\FormatHeaderFooter.cs" />
+    <Compile Include="format_header_footer\UserControlHost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="format_header_footer\UserControlHost.Designer.cs">
+      <DependentUpon>UserControlHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="format_header_footer\UserControlWtpCTP.xaml.cs" />
     <Compile Include="guid\XlGUID.cs" />
     <Compile Include="IRibbonCallbacks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,15 +94,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="RibbonUI.cs" />
-    <Compile Include="format_header_footer\UserControlHost.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="format_header_footer\UserControlHost.Designer.cs">
-      <DependentUpon>UserControlHost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="format_header_footer\UserControlWtpCTP.xaml.cs">
-      <DependentUpon>UserControlWtpCTP.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -108,12 +106,12 @@
     <None Include="Properties\ExcelDna.Build.props" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="format_header_footer\UserControlHost.resx">
+      <DependentUpon>UserControlHost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="format_header_footer\UserControlHost.resx">
-      <DependentUpon>UserControlHost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -131,7 +129,7 @@
   <ItemGroup>
     <Page Include="format_header_footer\UserControlWtpCTP.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
