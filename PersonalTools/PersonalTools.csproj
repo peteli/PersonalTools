@@ -93,6 +93,15 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="QRCode\UserControlQRC-Host.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QRCode\UserControlQRC-Host.Designer.cs">
+      <DependentUpon>UserControlQRC-Host.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QRCode\UserControlQRC.xaml.cs">
+      <DependentUpon>UserControlQRC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RibbonUI.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +122,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="QRCode\UserControlQRC-Host.resx">
+      <DependentUpon>UserControlQRC-Host.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">
@@ -130,6 +142,10 @@
     <Page Include="format_header_footer\UserControlWtpCTP.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="QRCode\UserControlQRC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

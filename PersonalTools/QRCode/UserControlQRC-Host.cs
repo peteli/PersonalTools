@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace peteli.PersonalTools.QRCode
+namespace peteli.PersonalTools.QR
 {
     public partial class UserControlQRC_Host : UserControl
     {

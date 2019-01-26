@@ -1,4 +1,4 @@
-﻿namespace peteli.PersonalTools.QRCode
+﻿namespace peteli.PersonalTools.QR
 {
     partial class UserControlQRC_Host
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userControlQRC1 = new peteli.PersonalTools.QRCode.UserControlQRC();
+            this.userControlQRC1 = new peteli.PersonalTools.QR.UserControlQRC();
             this.SuspendLayout();
             // 
             // elementHost1

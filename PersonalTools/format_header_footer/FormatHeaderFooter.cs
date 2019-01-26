@@ -217,12 +217,12 @@ namespace peteli.PersonalTools
         public Int32 ActualCharactersHeaderFooter => LeftFooter.Length + CenterFooter.Length + RightFooter.Length;
         public bool IsToManyCharactersHeaderFooter => (ActualCharactersHeaderFooter >= MaxCharactersHeaderFooter) ? true : false;
         #endregion
-        #region QRcode
+        #region QRcodeSection
         public Bitmap GetQRCodeImage(string QRCodeText)
         {
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(QRCodeText, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
+            QRCode qrCode = new QRCoder.QRCode(qrCodeData);
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
             return qrCodeImage;

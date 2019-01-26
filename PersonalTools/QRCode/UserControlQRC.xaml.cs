@@ -16,7 +16,7 @@ using QRCoder;
 using System.Drawing;
 using System.Windows.Interop;
 
-namespace peteli.PersonalTools.QRCode
+namespace peteli.PersonalTools.QR
 {
     /// <summary>
     /// Interaktionslogik für UserControlQRC.xaml
