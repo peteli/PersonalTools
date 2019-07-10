@@ -2,10 +2,49 @@
 using System.Windows.Forms;
 using ExcelDna.Integration;
 using ExcelDna.Integration.CustomUI;
+using System.Collections.Generic;
 
 namespace peteli.PersonalTools
 {
     // TODO CTPManager to organize more than one ctp
+    
+    internal static class CustomTaskPaneManager
+    {
+        internal static Dictionary<string, CustomTaskPane> CustomTaskPanes = new Dictionary<string, CustomTaskPane>();
+
+        internal static void Hide(CustomTaskPane customTaskPane)
+        {
+            string uniqueControlName = customTaskPane.GetHashCode().ToString();
+            if(CustomTaskPanes.ContainsKey(uniqueControlName))
+            {
+                CustomTaskPanes[uniqueControlName].Delete();
+                CustomTaskPanes.Remove(uniqueControlName);
+            }
+        }
+
+        internal static CustomTaskPane Show(System.Type userControl,string title,MsoCTPDockPosition msoCTPDockPosition=MsoCTPDockPosition.msoCTPDockPositionLeft)
+        {
+            //throw new NotImplementedException();
+            // create new custom task pane with ExcelDna.Integration.CustomUI.CustomTaskPaneFactory
+            CustomTaskPane customTaskPane = CustomTaskPaneFactory.CreateCustomTaskPane(userControl, "newItem");
+            customTaskPane.DockPosition = msoCTPDockPosition;
+            customTaskPane.Visible = true;
+            customTaskPane.VisibleStateChange += CustomTaskPane_VisibleStateChange;
+            string uniqueControlName = customTaskPane.GetHashCode().ToString();
+            CustomTaskPanes.Add(uniqueControlName, customTaskPane);
+            return customTaskPane;
+        }
+
+        private static void CustomTaskPane_VisibleStateChange(CustomTaskPane CustomTaskPaneInst)
+        {
+            if (CustomTaskPaneInst.Visible == false)
+            {
+                Hide(CustomTaskPaneInst);
+            }
+        }
+    }
+
+
     /// <summary>
     /// helper class to manage CTP - Custom Task Pane 
     /// </summary>
@@ -52,5 +91,3 @@ namespace peteli.PersonalTools
         }
     }
 }
-
-//Dialog Properties / Summary Info / (xlDialogProperties, xlDialogSummaryInfo)
